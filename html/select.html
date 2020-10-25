@@ -28,23 +28,41 @@
     });
   });
     </script>
+    <script src="https://cdn.anychart.com/js/8.0.1/anychart-core.min.js"></script>
+      <script src="https://cdn.anychart.com/js/8.0.1/anychart-pie.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
 
-    const $valueSpan = $('.valueSpan3');
-    const $value = $('#customRange12');
-    $valueSpan.html($value.val());
-    $value.on('input change', () => {
+        const $valueSpan = $('.valueSpan3');
+        const $value = $('#customRange12');
+        $valueSpan.html($value.val());
+        $value.on('input change', () => {
 
-      $valueSpan.html($value.val());
-    });
+          $valueSpan.html($value.val());
+        });
 
-    $('#sel_but').on('click', function(event) {
-        $("#result").removeClass('invisible');
-      });
+        $('#sel_but').on('click', function(event) {
+          $("#result").removeClass('invisible');
+        });
+
+        var data = [
+            {x: "Самарская обл.", value: 31},
+            {x: "ТрансКонтейнер", value: 18},
+            {x: "ПИК", value: 12},
+            {x: "ОФЗ 26215", value: 11},
+            {x: "Северсталь", value: 6},
+            {x: "Новатек", value: 7},
+        ];
+
+        var chart = anychart.pie();
+
+        chart.title("Ваш инвестиционный портфель");
+
+        chart.data(data);
+
+        chart.container('result');
+        chart.draw();
   });
-
-
     </script>
 
   </head>
@@ -103,8 +121,8 @@
     <div class="my-4">
       <button type="button" class="btn btn-success" id="sel_but">Подобрать</button>
     </div>
-    <div id="result" class="invisible">
-      Megaflex
+    <div id="result" class="invisible" style="width: 100%; height: 230px;" >
+    </div>
     </div>
 
     </div>
