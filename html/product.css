@@ -104,3 +104,10 @@
 button::-moz-focus-inner {
   border: 0;
 }
+
+hr {
+    border: none; /* Убираем границу */
+    background-color: grey; /* Цвет линии */
+    color: grey; /* Цвет линии для IE6-7 */
+    height: 1px; /* Толщина линии */
+}
