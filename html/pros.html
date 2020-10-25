@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
-    <title>Инвестиции</title>
+    <title>Преимущества</title>
 
     <link rel="icon" href="../img/icon.png" type="image/png">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/product/">
@@ -32,12 +32,18 @@
     <script type="text/javascript">
       $(document).ready(function() {
 
-    const $valueSpan = $('.valueSpan3');
-    const $value = $('#customRange12');
+    const $valueSpan = $('.valueSpan2');
+    const $value = $('#customRange11');
+    const $flex1 = $('.flex1');
+    const $flex2 = $('.flex2');
     $valueSpan.html($value.val());
+    $flex1.html(Math.round($value.val() * 76.125));
+    $flex2.html(Math.round($value.val() * 76.125 * 0.0094));
     $value.on('input change', () => {
 
       $valueSpan.html($value.val());
+      $flex1.html(Math.round($value.val() * 76.125));
+      $flex2.html(Math.round($value.val() * 76.125 * 0.0094));
     });
 
     $('#sel_but').on('click', function(event) {
@@ -85,9 +91,34 @@
           </div>
         </div>
     </div>
+    <div class="align-cont-start">
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-8 text-left">
+            <p></p>
+            <p style="font-size: large; font-style: italic;" class="text-center">Сколько теряют клиенты банков при покупке валюты</p>
+            <div class="row">
+              <div class="col-6">
+                <a style="font-size: 1.5em">Cколько вы хотите обменять</a></br>
+                <span class="text-danger ml-2 valueSpan2" style="font-size: 2.0em"></span> <a style="font-size: 1.5em">$</a>
+                <div class="d-flex justify-content-left">
+                  <div style="width: 90%;">
+                      <input type="range" class="custom-range" id="customRange11" min="1000" max="10000" step="100" value="2000">
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <a style="font-size: 1.5em">Сумма обмена</a><span class="text-danger ml-2 flex1" style="font-size: 2.0em"></span> <a style="font-size: 1.5em">₽</a></br>
+                <a style="font-size: 1.5em">В банке вы теряете</a><span class="text-danger ml-2 flex2" style="font-size: 2.0em"></span> <a style="font-size: 1.5em">₽</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-2"></div>
+        </div>
+      </div>
   </div>
 </div>
-  
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
   </body>

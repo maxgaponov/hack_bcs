@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
-    <title>Инвестиции</title>
+    <title>Подбор инструментов</title>
 
     <link rel="icon" href="../img/icon.png" type="image/png">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/product/">
@@ -32,6 +32,10 @@
     <script src="https://cdn.anychart.com/js/8.0.1/anychart-core.min.js"></script>
       <script src="https://cdn.anychart.com/js/8.0.1/anychart-pie.min.js"></script>
     <script type="text/javascript">
+      // sleep time expects milliseconds
+      function sleep (time) {
+        return new Promise((resolve) => setTimeout(resolve, time));
+      }
       $(document).ready(function() {
 
         const $valueSpan = $('.valueSpan3');
@@ -43,7 +47,9 @@
         });
 
         $('#sel_but').on('click', function(event) {
-          $("#result").removeClass('invisible');
+          sleep(1000).then(() => {
+            $("#result").removeClass('invisible');
+          });
         });
 
         var data = [
@@ -101,7 +107,7 @@
           <div class="col-8 text-left">
             <p></p>
             <p style="font-size: large; font-style: italic">1. Какую сумму вы собираетесь вложить?</p>
-            <span class="text-danger ml-2 valueSpan2" style="font-size: 2.5em"></span> <a style="font-size: 1.5em">рублей</a>
+            <span class="text-danger ml-2 valueSpan2" style="font-size: 2.5em"></span> <a style="font-size: 1.5em">₽</a>
             <div class="d-flex justify-content-center">
               <div style="width: 100%">
                   <input type="range" class="custom-range" id="customRange11" min="1000" max="100000" step="1000" value="10000">
