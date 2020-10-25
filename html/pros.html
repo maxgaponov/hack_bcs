@@ -59,10 +59,9 @@
 <!--        <a class="py-2 d-none d-md-inline-block nav-item" href="#">Информация</a>-->
         <a class="nav-link dropdown-toggle py-2 d-none d-md-inline-block" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Информация</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item " href="info_ac.html">Акции</a>
-          <a class="dropdown-item" href="info_ob.html">Облигации</a>
+          <a class="dropdown-item " href="info_cr.html">Фондовый рынок</a>
+          <a class="dropdown-item" href="info_ac.html">Акции и облигации</a>
           <a class="dropdown-item" href="info_st.html">Структурные продукты</a>
-          <a class="dropdown-item" href="info_cr.html">Валюта</a>
         </div>
 <!--      </li>-->
       <a class="py-2 d-none d-md-inline-block btn border-light text-light" href="#">Открыть счет</a>
@@ -73,81 +72,21 @@
   <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
     <div class="my-3 p-3">
       <h2 class="display-5">Преимущества перед банками</h2>
-
-        <div class="row" style="height: 340px; color: whitesmoke">
-    <div class="col-3 text-center bg-light" style="border-radius: 21px 21px 21px 21px; margin: 15px; background: url(https://st.depositphotos.com/1005145/2341/i/450/depositphotos_23418410-stock-photo-pink-flowers-in-the-mountains.jpg);      -moz-background-size: 100%; /* Firefox 3.6+ */
-    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
-    -o-background-size: 100%; /* Opera 9.6+ */
-    background-size: 100%; /* Современные браузеры */
-    ">
-      <h1 style="text-shadow: black 0 0 5px">Лучше чем в банке</h1>
-      <p style="text-shadow: black 0 0 5px">Бла-бла-бла-бла-бла ляляляля хехехех пчих</p>
-      <a class="btn border-dark text-dark" href="#"> Подробнее</a>
-    </div>
-
-    <div class="col-8 text-center bg-light" style="border-radius: 21px 21px 21px 21px; margin: 15px; background: url(https://www.kartinki24.ru/uploads/gallery/main/196/kartinki24_ru_forest_78.jpg);      -moz-background-size: 100%; /* Firefox 3.6+ */
-      -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
-      -o-background-size: 100%; /* Opera 9.6+ */
-      background-size: 100%; /* Современные браузеры */
-      ">
-        <h1 style="text-shadow: black 0 0 5px">Доходность по акциям</h1>
-        <p style="text-shadow: black 0 0 5px">За последний год</p>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col">
-              <p>Apple +96.45%</p>
-              <p>TESLA +542.95%</p>
-              <p>Яндекс +76.98%</p>
-              <p>Mail.ru +45.02%</p>
-            </div>
-            <div class="col">
-              <p>MTC +19.78%</p>
-              <p>Магнит +52.32%</p>
-              <p>Ростелеком +20.23%</p>
-              <p>Северсталь +20.95%</p>
-            </div>
+        <div class="row" style="height: 340px; color: whitesmoke; margin-top: 50px;">
+          <div class="col-5 text-center bg-light">
+            <p class="text-dark" style="font-size: 1.5em;">Как падают ставки по вкладам</p>
+            <img src="../img/graph_down.jpg" class="img-fluid" alt="Responsive image">
+          </div>
+          <div class="col-2"></div>
+          <div class="col-5 text-center bg-light">
+            <p class="text-dark" style="font-size: 1.5em;">Доходность по акциям</p>
+            <img src="../img/graph_up.jpg" class="img-fluid" alt="Responsive image">
           </div>
         </div>
-        <a class="btn border-light text-light" href="#">Подробнее</a>
     </div>
   </div>
-
-      Сумма инвестиций<span class="font-weight-bold text-primary ml-2 valueSpan2"></span> рублей
-      <div class="d-flex justify-content-center">
-        <div style="width: 35%">
-            <input type="range" class="custom-range" id="customRange11" min="1000" max="100000" step="1000" value="10000">
-          </div>
-        </div>
-    </div>
-    Срок инвестирования<span class="font-weight-bold text-primary ml-2 valueSpan3"></span> месяцев
-      <div class="d-flex justify-content-center">
-        <div style="width: 35%">
-            <input type="range" class="custom-range" id="customRange12" min="1" max="36" value="12">
-          </div>
-        </div>
-
-    <div class="btn-group btn-group-toggle" data-toggle="buttons" style="margin-top: 20px">
-      <label class="btn btn-info active">
-        <input type="radio" name="options" id="option1" autocomplete="off" checked>Низкий риск <br>Низкая доходность
-      </label>
-      <label class="btn btn-info">
-        <input type="radio" name="options" id="option2" autocomplete="off">Умеренный риск <br>Умеренная доходность
-      </label>
-      <label class="btn btn-info">
-        <input type="radio" name="options" id="option3" autocomplete="off">Высокий риск <br>Высокая доходность
-      </label>
-    </div>
-    <div class="my-4">
-      <button type="button" class="btn btn-success" id="sel_but">Подобрать</button>
-    </div>
-    <div id="result" class="invisible">
-      Megaflex
-    </div>
-
-    </div>
-
 </div>
-
+  
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
   </body>
