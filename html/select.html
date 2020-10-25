@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Инвестиции</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/product/">
+
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="product.css" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+      <script type="text/javascript">
+      $(document).ready(function() {
+
+    const $valueSpan = $('.valueSpan2');
+    const $value = $('#customRange11');
+    $valueSpan.html($value.val());
+    $value.on('input change', () => {
+
+      $valueSpan.html($value.val());
+    });
+  });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+    const $valueSpan = $('.valueSpan3');
+    const $value = $('#customRange12');
+    $valueSpan.html($value.val());
+    $value.on('input change', () => {
+
+      $valueSpan.html($value.val());
+    });
+
+    $('#sel_but').on('click', function(event) {
+        $("#result").removeClass('invisible');
+      });
+  });
+
+
+    </script>
+
+  </head>
+  <body>
+
+  <nav class="site-header sticky-top py-1">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+      <a class="py-2 d-none d-md-inline-block" href="index.html">Главная</a>
+      <a class="py-2 d-none d-md-inline-block" href="pros.html">Преимущества</a>
+      <a class="py-2 d-none d-md-inline-block" href="select.html">Во что инвестировать</a>
+<!--      <li class="nav-item dropdown">-->
+<!--        <a class="py-2 d-none d-md-inline-block nav-item" href="#">Информация</a>-->
+        <a class="nav-link dropdown-toggle py-2 d-none d-md-inline-block" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Информация</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item " href="info_ac.html">Акции</a>
+          <a class="dropdown-item" href="info_ob.html">Облигации</a>
+          <a class="dropdown-item" href="info_st.html">Структурные продукты</a>
+          <a class="dropdown-item" href="info_cr.html">Валюта</a>
+        </div>
+<!--      </li>-->
+      <a class="py-2 d-none d-md-inline-block btn border-light text-light" href="#">Открыть счет</a>
+    </div>
+  </nav>
+
+<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+    <div class="my-3 p-3">
+      <h2 class="display-5">Что приобрести?</h2>
+<!--        <label for="customRange2">Сумма инвестиций</label>-->
+      <!--        <input type="range" class="custom-range" min="1000" max="1000000" id="customRange2">-->
+      Сумма инвестиций<span class="font-weight-bold text-primary ml-2 valueSpan2"></span> рублей
+      <div class="d-flex justify-content-center">
+        <div style="width: 35%">
+            <input type="range" class="custom-range" id="customRange11" min="1000" max="100000" step="1000" value="10000">
+          </div>
+        </div>
+    </div>
+    Срок инвестирования<span class="font-weight-bold text-primary ml-2 valueSpan3"></span> месяцев
+      <div class="d-flex justify-content-center">
+        <div style="width: 35%">
+            <input type="range" class="custom-range" id="customRange12" min="1" max="36" value="12">
+          </div>
+        </div>
+
+    <div class="btn-group btn-group-toggle" data-toggle="buttons" style="margin-top: 20px">
+      <label class="btn btn-info active">
+        <input type="radio" name="options" id="option1" autocomplete="off" checked>Низкий риск <br>Низкая доходность
+      </label>
+      <label class="btn btn-info">
+        <input type="radio" name="options" id="option2" autocomplete="off">Умеренный риск <br>Умеренная доходность
+      </label>
+      <label class="btn btn-info">
+        <input type="radio" name="options" id="option3" autocomplete="off">Высокий риск <br>Высокая доходность
+      </label>
+    </div>
+    <div class="my-4">
+      <button type="button" class="btn btn-success" id="sel_but">Подобрать</button>
+    </div>
+    <div id="result" class="invisible">
+      Megaflex
+    </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
