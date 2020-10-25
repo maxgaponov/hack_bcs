@@ -47,28 +47,45 @@
         });
 
         $('#sel_but').on('click', function(event) {
-          sleep(1000).then(() => {
+          sleep(500).then(() => {
+            let data;
+            if (document.getElementById('option1').checked) {
+              data = [
+                {x: "Самарская обл.", value: 31},
+                {x: "ТрансКонтейнер", value: 18},
+                {x: "ПИК", value: 12},
+                {x: "ОФЗ 26215", value: 11},
+                {x: "Северсталь", value: 6},
+                {x: "Новатек", value: 7},
+              ];
+            } else {
+                data = [
+                  {x: "Алроса", value: 9},
+                  {x: "Сбербанк", value: 9},
+                  {x: "Норникель", value: 17},
+                  {x: "Татнефть", value: 9},
+                  {x: "Детский мир", value: 10},
+                  {x: "ФСК ЕЭС ОАО", value: 9},
+                  {x: "Северсталь", value: 10},
+                  {x: "НЛМК", value: 9},
+                  {x: "ОФЗ 29012", value: 11},
+                  {x: "Роснано БО-002", value: 11},
+                ];
+            }
+
+            let chart = anychart.pie();
+
+            chart.title("Ваш инвестиционный портфель");
+
+            chart.data(data);
+            $("#result")[0].innerHTML = "";
+            chart.container('result');
+            chart.draw();
             $("#result").removeClass('invisible');
           });
         });
 
-        var data = [
-            {x: "Самарская обл.", value: 31},
-            {x: "ТрансКонтейнер", value: 18},
-            {x: "ПИК", value: 12},
-            {x: "ОФЗ 26215", value: 11},
-            {x: "Северсталь", value: 6},
-            {x: "Новатек", value: 7},
-        ];
 
-        var chart = anychart.pie();
-
-        chart.title("Ваш инвестиционный портфель");
-
-        chart.data(data);
-
-        chart.container('result');
-        chart.draw();
   });
     </script>
 
